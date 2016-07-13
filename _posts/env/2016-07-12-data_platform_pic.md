@@ -15,6 +15,10 @@ tags: [hortonworks, data, platform]
 
 [![physical]({{ site.baseurl }}/img/env/physical.png)]({{ site.baseurl }}/img/env/physical.png)
 
+比较
+
+[![compare]({{ site.baseurl }}/img/env/compare.png)]({{ site.baseurl }}/img/env/compare.png)
+
 ### 实际部署
 
 [![deploy]({{ site.baseurl }}/img/env/deployment.png)]({{ site.baseurl }}/img/env/deployment.png)
