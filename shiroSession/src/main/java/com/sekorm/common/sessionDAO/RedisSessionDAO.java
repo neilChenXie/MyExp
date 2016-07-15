@@ -88,7 +88,7 @@ public class RedisSessionDAO extends AbstractSessionDAO {
 			logger.error("Redis Error： {}", e.getMessage());
 		} finally {
 			// 存入内存
-			sessionMap.putIfAbsent(session.getId(), session);
+			sessionMap.put(session.getId(), session);
 		}
 
 	}
@@ -126,8 +126,9 @@ public class RedisSessionDAO extends AbstractSessionDAO {
 		}
 
 		// 服务器启动：Redis与内存不同时，以Redis为准
-		if (redisSession!=null && redisSession.equals(memorySession)) {
-			sessionMap.put(redisSession.getId(), redisSession);
+		if (redisSession != null && redisSession.equals(memorySession)) {
+			// sessionMap.put(redisSession.getId(), redisSession);
+			saveSession(redisSession, getTimeout() * 1000);
 		}
 
 		return redisSession;
