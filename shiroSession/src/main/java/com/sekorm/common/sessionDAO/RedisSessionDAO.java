@@ -127,6 +127,7 @@ public class RedisSessionDAO extends AbstractSessionDAO {
 
 		// 服务器启动：Redis与内存不同时，以Redis为准
 		if (redisSession != null && redisSession.equals(memorySession)) {
+			//TODO：可能BUG：每次比较都会进来，有问题？？？
 			saveSession(redisSession, getTimeout() * 1000);
 		}
 
