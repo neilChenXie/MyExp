@@ -109,7 +109,7 @@ public class RedisSessionDAO extends AbstractSessionDAO {
 		}
 
 		Session redisSession = null;
-		Session memorySession = sessionMap.get(sessionId);
+		Session memorySession = sessionMap.get(sessionId.toString());
 
 		try {
 			// 从Redis获得session
@@ -126,8 +126,8 @@ public class RedisSessionDAO extends AbstractSessionDAO {
 		}
 
 		// 服务器启动：Redis与内存不同时，以Redis为准
-		if (redisSession != memorySession) {
-			saveSession(redisSession, getTimeout() * 1000);
+		if (redisSession!=null && redisSession.equals(memorySession)) {
+			sessionMap.put(redisSession.getId(), redisSession);
 		}
 
 		return redisSession;
