@@ -7,9 +7,23 @@ category: Env
 tags: [shiro, session, redis]
 ---
 
-### `RedisSessionDAO`
+### 方案
 
-继承 `AbstractSessionDAO`
+#### Redis 存在单点问题时
+
+* 负载均衡：ip_hash；
+* HA：内存，Redis。 创建 和 读 Session时, 同步
+* 单机验证：两个浏览器，两个端口，在登录，使用，登出时，断开或连接Redis
+
+#### Redis HA保证时
+
+* 负载均衡：轮训，负载均分；
+* HA: 依赖Redis HA
+* 单机验证：一个浏览器，两个端口，在登录，使用，登出时，断开或连接Redis
+
+### 实现
+
+`RedisSessionDAO` 继承 `AbstractSessionDAO`
 
 需要实现：
 
