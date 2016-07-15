@@ -9,6 +9,8 @@ tags: [shiro, session, redis]
 
 ### 方案
 
+[![arch]({{ site.baseurl }}/img/deploy/RedisShiroSession.png)]({{ site.baseurl }}/img/deploy/RedisShiroSession.png)
+
 #### Redis 存在单点问题时
 
 * 负载均衡：ip_hash；
