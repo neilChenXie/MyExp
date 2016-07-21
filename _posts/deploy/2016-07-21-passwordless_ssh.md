@@ -51,8 +51,9 @@ scp {new_host}:.ssh/id_rsa.pub new_host_id
 # add to authorized_keys
 cat new_host_id >> authorized_keys
 
-# spread new authorized_keys
+# spread new authorized_keys and hosts
 scp authorized_keys {all_ip_s}:.ssh/authorized_keys
+scp /etc/hsots {all_ip_s}:/etc/hosts
 ```
 
 #### 管理机器第一次生成SSH
