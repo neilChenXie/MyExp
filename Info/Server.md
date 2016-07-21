@@ -14,6 +14,16 @@ Root password
 
 > 172.16.1.83:90
 
-## vmware 
+## vsphere server 
 
 > 172.16.1.68
+
+## Server Gateway
+
+因为子网掩码是255.255.255.0，所以前三位和服务器一样。
+
+> 172.16.2.254
+
+## ntp/DNS server
+
+> 172.16.1.1
