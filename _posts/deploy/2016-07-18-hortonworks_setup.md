@@ -3,7 +3,7 @@ layout: post
 title: Hortonworks 安装
 permalink: /:categories/Hortonworks_setup
 date: 2016-07-18 11:30:15 +0800
-category: Env
+category: Deploy
 tags: [hortonworks, setup]
 ---
 
