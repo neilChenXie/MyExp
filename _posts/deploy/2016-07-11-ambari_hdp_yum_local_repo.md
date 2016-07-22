@@ -1,7 +1,7 @@
 ---
 layout: post
-title: yum本地仓库
-permalink: /:categories/yum_local_repo
+title: Ambari-HDP-yum本地仓库
+permalink: /:categories/ambari_hdp_yum_local_repo
 date: 2016-07-11 11:30:15 +0800
 category: Env
 tags: [yum]
@@ -27,7 +27,7 @@ reposync -r Updates-ambari-2.2.2.0
 创建仓库
 
 ```bash
-createrepo <web.server.directory>/ambari/<OS>/Updates-ambari-2.2.2.0
+createrepo /var/www/html/ambari/<OS>/Updates-ambari-2.2.2.0
 ```
 
 打开apache服务器
