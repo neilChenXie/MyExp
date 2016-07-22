@@ -45,7 +45,8 @@ yum install yum-utils
 最需要的就是`repotrack`，下载包及所有依赖
 
 ```bash
-repotrack -a {version} -p {path} {package} 
+# 在仓库中下载指定包及所有依赖
+repotrack -a {version} -p /var/www/html/{path}/{to}/{repo} {package} 
 ```
 
 version:
