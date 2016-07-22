@@ -11,7 +11,7 @@ tags: [yum, repo, setup]
 
 `yum repolist`
 
-### 创建本地仓库
+### 同步远程仓库
 
 > 基于apache服务器
 
@@ -47,6 +47,9 @@ yum install yum-utils
 ```bash
 # 在仓库中下载指定包及所有依赖
 repotrack -a {version} -p /var/www/html/{path}/{to}/{repo} {package} 
+
+# 生效
+createrepo /var/www/html/{path}/{to}/{package}
 ```
 
 version:
