@@ -12,7 +12,15 @@ Root password
 
 ## Yum 仓库
 
-> 172.16.1.83:90
+> 临时：172.16.1.83:90
+
+IP
+
+> 172.16.1.114
+
+Root password
+
+> Root1234
 
 ## vsphere server 
 
