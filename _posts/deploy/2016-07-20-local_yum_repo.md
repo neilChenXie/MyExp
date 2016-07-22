@@ -24,7 +24,7 @@ mkdir {name}/{os_version}
 cd {name}/{os_version}
 
 # 3. 同步现有仓库（所有rpm包），同步单独包在后面
-reposync -r {所需包}
+reposync -r {指定仓库}
 
 # 4. 生效
 createrepo {path}/{to}/{package}
