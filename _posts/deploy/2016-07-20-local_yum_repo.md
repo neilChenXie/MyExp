@@ -60,3 +60,14 @@ version:
 * i386
 * ...
 
+#### \*.repo
+
+```
+[my-tool]
+name=my-tool
+baseurl=http://172.16.9.145/mytool
+enabled=1
+priority=1
+gpgcheck=0 # diable gpgcheck
+gpgkey=http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+```
