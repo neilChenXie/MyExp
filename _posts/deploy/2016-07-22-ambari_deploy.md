@@ -16,6 +16,8 @@ HDP-2.4.2(for CentOS 7)
 
 CentOS系统需要英文版（据说CentOS 6不用，但未验证）
 
+> [oschina帖子](http://www.oschina.net/question/2684511_2159089?fromerr=LweXJhlz)
+
 ### 步骤
 
 1. [环境检查]({{ site.baseurl }}/deploy/Hortonworks_setup)
