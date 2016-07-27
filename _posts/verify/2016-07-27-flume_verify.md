@@ -102,7 +102,7 @@ a1.channels = c1
 # Describe/configure the source
 a1.sources = r1
 a1.sources.r1.type = avro
-a1.sources.r1.bind = 172.16.2.51
+a1.sources.r1.bind = 172.16.2.51 # must be the same as avro sink
 a1.sources.r1.port = 4141
 
 # Describe the sink
