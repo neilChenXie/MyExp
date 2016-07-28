@@ -3,7 +3,7 @@ layout: post
 title: Shiro Session 外置Redis
 permalink: /:categories/shiro_session_redis
 date: 2016-07-14 11:30:15 +0800
-category: Deploy
+category: Arch
 tags: [shiro, session, redis]
 ---
 
