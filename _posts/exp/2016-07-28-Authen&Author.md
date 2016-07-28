@@ -2,8 +2,8 @@
 layout: post
 title: 验证与授权
 permalink: /:categories/shiro_session_redis
-date: 2016-07-14 11:30:15 +0800
-category: 经验
+date: 2016-07-28 11:30:15 +0800
+category: Experience
 tags: [shiro, session, redis]
 ---
 
