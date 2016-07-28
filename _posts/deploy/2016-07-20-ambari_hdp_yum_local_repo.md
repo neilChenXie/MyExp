@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ambari-HDP-Yum本地仓库及使用
+title: Ambari-HDP Yum本地仓库及使用
 permalink: /:categories/ambari_hdp_yum_local_repo
 date: 2016-07-20 17:30:15 +0800
 category: Deploy
@@ -9,7 +9,7 @@ tags: [yum, repo, ambari, hdp]
 
 ### 索引
 
-* [hortonworks](http://docs.hortonworks.com/HDPDocuments/Ambari-2.2.2.0/bk_Installing_HDP_AMB/content/_setting_up_a_local_repository_with_no_internet_access.html)
+* [官方文档](http://docs.hortonworks.com/HDPDocuments/Ambari-2.2.2.0/bk_Installing_HDP_AMB/content/_using_a_local_repository.html)
 
 所建仓库有两部分:
 
