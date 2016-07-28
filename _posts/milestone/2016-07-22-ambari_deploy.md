@@ -7,6 +7,8 @@ category: Milestone
 tags: [ambari, setup]
 ---
 
+{:toc}
+
 ### 版本
 
 ambari-2.2.2
