@@ -15,8 +15,8 @@ tags: [resource, prediciton]
 
 ### 性能计算
 
-
 每台虚拟机
+
 * 8核
 * 32G内存
 * 1T硬盘
