@@ -24,6 +24,7 @@ tags: [resource, prediciton]
 服务器
 
 > 4虚拟机/物理服务器
+
 * 32核
 * 128G内存
 * 4T硬盘
