@@ -9,9 +9,9 @@ tags: [resource, prediciton]
 
 ### 机器数量
 
-![机器数量]({{ site.baseurl }}/img/deploy/机器数量.png)
+[![机器数量]({{ site.baseurl }}/img/deploy/机器数量.png)](({{ site.baseurl }}/img/deploy/机器数量.png))
 
-![资源评估]({{ site.baseurl }}/img/deploy/资源评估.png)
+[![资源评估]({{ site.baseurl }}/img/deploy/资源评估.png)](({{ site.baseurl }}/img/deploy/资源评估.png))
 
 ### 性能计算
 
