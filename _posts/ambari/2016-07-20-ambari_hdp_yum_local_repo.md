@@ -3,7 +3,7 @@ layout: post
 title: Ambari-HDP Yum本地仓库及使用
 permalink: /:categories/ambari_hdp_yum_local_repo/
 date: 2016-07-20 17:30:15 +0800
-category: Deploy
+category: Ambari
 tags: [yum, repo, ambari, hdp]
 ---
 

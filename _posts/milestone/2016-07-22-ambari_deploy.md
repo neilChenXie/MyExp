@@ -20,9 +20,9 @@ CentOS系统需要英文版（据说CentOS 6不用，但未验证）
 
 ### 步骤
 
-1. [环境检查]({{ site.baseurl }}/deploy/Hortonworks_setup)
-2. [ssh无密码]({{ site.baseurl }}/deploy/passwordless_ssh)
-3. [本地repo搭建]({{ site.baseurl }}/deploy/ambari_hdp_yum_local_repo )
+1. [环境检查]({{ site.baseurl }}/ambari/Hortonworks_setup/)
+2. [ssh无密码]({{ site.baseurl }}/ambari/passwordless_ssh/)
+3. [本地repo搭建]({{ site.baseurl }}/ambari/ambari_hdp_yum_local_repo/)
 4. 按照步骤选择集群机器，安装所需模块。（建议先只安装HDFS和Zookeeper，其它后面增加）
 
 ### 注意事项
