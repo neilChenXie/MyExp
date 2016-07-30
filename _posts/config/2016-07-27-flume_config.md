@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FlumeNG 详细配置
-permalink: /:categories/flume_config
+permalink: /:categories/flume_config/
 date: 2016-07-27 11:30:15 +0800
 category: Config
 tags: [flume, config]

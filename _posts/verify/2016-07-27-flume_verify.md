@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FlumeNG 模块验证
-permalink: /:categories/flume_verify
+permalink: /:categories/flume_verify/
 date: 2016-07-27 11:30:15 +0800
 category: Verify
 tags: [flume]

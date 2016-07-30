@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 生产环境搭建
-permalink: /:categories/production_env
+permalink: /:categories/production_env/
 date: 2016-07-12 11:30:15 +0800
 category: Env
 tags: [hortonworks]

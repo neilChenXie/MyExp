@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ambari 部署
-permalink: /:categories/ambari_setup
+permalink: /:categories/ambari_setup/
 date: 2016-07-27 11:30:15 +0800
 category: Milestone
 tags: [ambari, setup]
