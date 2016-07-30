@@ -3,7 +3,7 @@ layout: post
 title: 数据平台图
 permalink: /:categories/data_platform_pic/
 date: 2016-07-12 13:30:15 +0800
-category: Deploy
+category: Arch
 tags: [hortonworks, data, platform]
 ---
 
