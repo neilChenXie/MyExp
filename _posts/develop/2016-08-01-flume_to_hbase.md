@@ -17,4 +17,8 @@ tags: [develop, flume, hbase]
 # kafka, 1st zookeeper, 2nd kafka
 bin/zookeeper-server-start.sh config/zookeeper.properties
 bin/kafka-server-start.sh config/server.properties
+
+# flume
+flume-ng agent --conf ./conf/ --conf-file=./conf/kafka_sink.properties --name a1 -Dflume.root.logger=INFO,console
 ```
+
