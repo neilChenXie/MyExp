@@ -123,3 +123,4 @@ a1.sinks.k1.channel = c1
 
 tail -f /var/log/flume/flume_{agentName}.log
 ```
+

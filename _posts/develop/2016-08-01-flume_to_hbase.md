@@ -10,3 +10,11 @@ tags: [develop, flume, hbase]
 ### Component
 
 * [flume kafka sink](https://flume.apache.org/FlumeUserGuide.html#kafka-sink)
+
+### Start
+
+```bash
+# kafka, 1st zookeeper, 2nd kafka
+bin/zookeeper-server-start.sh config/zookeeper.properties
+bin/kafka-server-start.sh config/server.properties
+```
