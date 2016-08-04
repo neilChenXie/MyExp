@@ -7,14 +7,32 @@ category: Milestone
 tags: [olap, portrait]
 ---
 
-### Purpose
+### Purpose(目标)
 
-#### whatever
+More lightweight OLTP, focus on transaction
 
-##### asdfa
+make full of collected data, support operation and production department
 
-#### whatever
+### Relationship(关系)
 
-#### whatever
+[![oltp&olap]({{ site.baseurl }}/img/milestone/OLTP&OLAP.png)]({{ site.baseurl }}/img/milestone/OLTP&OLAP.png)
 
-#### whatever
+### Physic（环境）
+
+#### Maintainance(运维)
+
+[![maintain]({{ site.baseurl }}/img/milestone/maintain.png)]({{ site.baseurl }}/img/milestone/maintain.png)
+
+### Logic(业务）
+
+> ETL -> model -> statistics -> analysis -> data mining
+
+[![logic]({{ site.baseurl }}/img/env/logical.png)]({{ site.baseurl }}/img/env/logical.png)
+
+#### ETL
+
+[![etl]({{ site.baseurl }}/img/milestone/ETL.png)]({{ site.baseurl }}/img/milestone/etl.png)
+
+#### Model
+
+#### Analysis
