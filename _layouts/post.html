@@ -6,14 +6,20 @@
 <body>
 
     <section class="main-content">
-
         <h2>{{ page.title }}
         </h2>
+
+
         <p class="meta">
             <span>{{ page.date | date_to_string }}<span>
         </p>
 
-		<blockquote><p>代码都需要理解含义，根据真实情况进行修改</p></blockquote>
+		<!-- toc -->
+		<div id="toc"></div>
+
+		<blockquote><p><i>注意：代码都需要理解含义，根据真实情况进行修改</i></p></blockquote>
+
+
         {{ content }}
 
         <!--Links-->
