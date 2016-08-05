@@ -35,4 +35,8 @@ make full of collected data, support operation and production department
 
 #### Model
 
+建模的前提有：数据存储方式，分析业务特点
+
+[![etl]({{ site.baseurl }}/img/milestone/model_think.png)]({{ site.baseurl }}/img/milestone/model_think.png)
+
 #### Analysis
