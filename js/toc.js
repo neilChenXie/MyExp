@@ -3,7 +3,7 @@
   $.fn.toc = function(options) {
     var defaults = {
       noBackToTopLinks: false,
-      title: '<h3>目录</h3>',
+      title: '<h2 id="content">目录</h2>',
       minimumHeaders: 3,
       headers: 'h1, h2, h3, h4, h5, h6',
       listType: 'ol', // values: [ol|ul]
@@ -72,14 +72,14 @@
         html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
       else if (this_level <= level){ // higher level than before; end parent ol
         for(i = this_level; i < level; i++) {
-          html += "</li></"+settings.listType+">"
+			html += "</li></"+settings.listType+">";
         }
         html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
       }
       else if (this_level > level) { // lower level than before; expand the previous to contain a ol
         for(i = this_level; i > level; i--) {
           html += "<" + settings.listType + " class=\"" + settings.classes.list +"\">" +
-                  "<li class=\"" + settings.classes.item + "\">"
+			  "<li class=\"" + settings.classes.item + "\">";
         }
         html += createLink(header);
       }
