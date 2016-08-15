@@ -1,10 +1,10 @@
 ---
 layout: post
 title: 日志分类
-permalink: /:categories/log_category
+permalink: /:categories/log_category/
 date: 2016-06-15 13:20:15 +0800
-category: Input
-tags: [input, flume, log]
+category: Nginx
+tags: [log]
 ---
 
 ### Read
