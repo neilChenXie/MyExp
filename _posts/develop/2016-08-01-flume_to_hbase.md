@@ -7,11 +7,9 @@ category: Develop
 tags: [develop, flume, hbase]
 ---
 
-### Component
-
-* [flume kafka sink](https://flume.apache.org/FlumeUserGuide.html#kafka-sink)
-
 ### Start
+
+> 启动Zookeeper，Kafka，FlumeNG
 
 ```bash
 # kafka, 1st zookeeper, 2nd kafka
@@ -22,12 +20,8 @@ bin/kafka-server-start.sh config/server.properties
 flume-ng agent --conf ./conf/ --conf-file=./conf/kafka_sink.properties --name a1 -Dflume.root.logger=INFO,console
 ```
 
-### Tutorial
+### Kafka
 
-#### Kafka
-
-* [tutorial point](http://www.tutorialspoint.com/apache_kafka/apache_kafka_cluster_architecture.htm)
-* [cnblogs](http://www.cnblogs.com/likehua/p/3999538.html)
 
 ### FlumeNG
 
