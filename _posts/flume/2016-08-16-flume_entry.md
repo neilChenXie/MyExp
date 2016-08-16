@@ -1,13 +1,50 @@
 ---
 layout: post
-title: FlumeNG 模块验证
-permalink: /:categories/flume_verify/
-date: 2016-07-27 11:30:15 +0800
+title: FlumeNG 入门
+permalink: /:categories/flume_entry/
+date: 2016-08-16 11:30:15 +0800
 category: FlumeNG
 tags: [flume]
 ---
 
-### 基本功能验证
+### 环境及安装
+
+| Name | Version | Check |
+| ---- | ------- | ----- |
+| JDK  | >= 1.7  | `java -version` |
+| FlumeNG | 1.6.0 | 无 |
+
+#### 安装
+
+```bash
+tar -zxvf {flume_pkt}.tar.gz
+```
+
+#### 安装测试
+
+```bash
+# 进入FlumeNG文件夹
+
+# 拷贝附带的测试配置文件
+cp conf/flume-conf.properties.template conf/unitTest.properties
+
+# 在Flume根目录下运行（因为路径都是相对路径）
+bin/flume-ng agent --conf conf --conf-file conf/flume-conf.properties --name agent -Dflume.root.logger=INFO,console
+```
+
+### 运行脚本及配置
+
+#### 运行脚本
+
+> 基于**安装测试**脚本的解释
+
+```bash
+bin/flume-ng agent --conf {flume配置文件夹} --conf-file {自定义配置文件相对路径} --name {自定义配置中Agent的名字} -Dflume.root.logger={日志等级及位置,不写查看conf/log4j.properties配置}
+```
+
+#### 常用场景
+
+##### Telnet手动输入
 
 配置文件
 
@@ -35,13 +72,6 @@ a1.sources.r1.channels = c1
 a1.sinks.k1.channel = c1
 ```   
 
-```bash
-# monitor
-
-tail -f /var/log/flume/flume_{agentName}.log
-```
-
-
 在Flume机器上执行
 
 > 需要telnet
@@ -55,7 +85,7 @@ Hello world! <ENTER>
 OK
 ```
 
-### Avro 通信验证
+##### Avro 通信验证
 
 Client（Avro Sink）
 
@@ -84,13 +114,6 @@ a1.channels.c1.transactionCapacity = 100
 a1.sources.r1.channels = c1
 a1.sinks.k1.channel = c1
 ```
-
-```bash
-# run
-
-bin/flume-ng agent --conf conf --conf-file {path to config_file} --name a1 -Dflume.root.logger=INFO,console
-```
-
 Collector
 
 ```
@@ -116,40 +139,4 @@ a1.channels.c1.transactionCapacity = 100
 # Bind the source and sink to the channel
 a1.sources.r1.channels = c1
 a1.sinks.k1.channel = c1
-```
-
-```bash
-# monitor
-
-tail -f /var/log/flume/flume_{agentName}.log
-```
-
-### Kafka Sink
-
-```bash
-a1.sources = r1
-a1.sinks = k1
-a1.channels = c1 c2
-
-# Describe/configure the source
-a1.sources.r1.type = spooldir
-a1.sources.r1.spoolDir = /home/hadoop/tmp
-a1.sources.r1.deserializer.maxLineLength = 4096
-a1.sources.r1.deserializer.outputCharset = UTF-8
-
-a1.sinks.k1.type= org.apache.flume.sink.kafka.KafkaSink
-a1.sinks.k1.brokerList=localhost:9092
-a1.sinks.k1.topic=chen
-
-
-a1.sinks.k2.type = logger
-
-a1.channels.c1.type = memory
-a1.channels.c1.capacity = 1000
-a1.channels.c1.transactionCapacity = 100
-
-# Bind the source and sink to the channel
-a1.sources.r1.channels = c1
-a1.sinks.k1.channel = c1
-a1.sinks.k2.channel = c1
 ```
