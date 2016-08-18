@@ -3,7 +3,7 @@ layout: post
 title: FlumeNG 入门
 permalink: /:categories/flume_entry/
 date: 2016-08-16 11:30:15 +0800
-category: FlumeNG
+category: Tutorial
 tags: [flume]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: Kafka 入门
 permalink: /:categories/kafka_entry/
 date: 2016-08-16 11:30:15 +0800
-category: Kafka
+category: Tutorial
 tags: [entry, kafka]
 ---
 
