@@ -28,7 +28,7 @@ tags: [flume, setup, env, operation]
 
 ### 三个脚本
 
-###### Flume-loadLog.sh
+#### Flume-loadLog.sh
 
 > 将要测试的日志导入已经监控的文件夹
 
@@ -37,7 +37,7 @@ tags: [flume, setup, env, operation]
 Flume-loadLog.sh nginx.log
 ```
 
-###### Flume-loadJar.sh
+#### Flume-loadJar.sh
 
 > 将sekorm-flume.jar包放入flume的载入目录
 
@@ -46,7 +46,7 @@ Flume-loadLog.sh nginx.log
 Flume-loadJar.sh
 ```
 
-###### Flume-start.sh
+#### Flume-start.sh
 
 > 启动Flume
 
