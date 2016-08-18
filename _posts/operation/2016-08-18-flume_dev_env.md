@@ -11,10 +11,14 @@ tags: [flume, setup, env, operation]
 
 #### **固定名字**Jar包到**指定目录**
 
+> 指定目录**不能**是Flume自己的lib目录
+
+目录修改通过conf/flume-env.sh文件中的FLUME_CLASSPATH变量
+
 目的：
 
 * 对Flume的Jar没有权限，避免损坏运行环境
-* 固定名字，每次替换，**避免遗留**Jar包影响运行
+* 固定名字，**每次**替换，**避免遗留**Jar包影响运行
 
 #### **任意**测试日志到**指定目录**
 
@@ -66,14 +70,14 @@ Flume-start.sh
 a1.sources.r1.interceptors = i1 i2 
 
 # 每一个interceptor对应的类
-a1.sources.r1.interceptors.i1.type = com.chen.SimpleInterceptor$Builder
+a1.sources.r1.interceptors.i1.type = com.sekorm.flume.interceptor.TrashFilter$Builder
 ```
 
 #### 修改log4j.properties
 
 > 在需要增加支持的类，或一个类下增加日志级别时
 
-每一个类下**两个**日志文件，一个INFO级别，一个DEBUG级别。打印到/home/{user}/logs/下面，方便开发获取
+每一个类下**两个**日志文件，一个INFO级别，一个DEBUG级别。打印到/home/{user}/logs/下面，方便**开发**获取
 
 > * 前者信息用于验证模块功能正确性
 > * 后者用于开发信息
@@ -81,7 +85,7 @@ a1.sources.r1.interceptors.i1.type = com.chen.SimpleInterceptor$Builder
 例子
 
 ```
-# Logger (log4j.logger.{className})
+# Logger (log4j.logger.{类名})
 ## com.sekorm.flume.interceptor.TrashFilter
 log4j.logger.com.sekorm.flume.interceptor.TrashFilter = DEBUG, trashInfo, trashDebug
 
@@ -106,3 +110,16 @@ log4j.appender.trashDebug.File = ${user.log.dir}/TrashFilterDebug.log
 log4j.appender.trashDebug.layout = org.apache.log4j.PatternLayout
 log4j.appender.trashInfo.layout.ConversionPattern=%d{dd MMM yyyy HH:mm:ss,SSS} %-5p [%t] (%C.%M:%L) %x - %m%n
 ```
+
+#### 增加依赖
+
+> 当Interceptor引入新依赖时，需要将新Jar包拷贝到lib/目录下
+
+### 资料索引
+
+#### log4j
+
+> log4j版本时1.2.7
+
+* [Log4j.properties配置详解](http://it.oyksoft.com/log4j/)
+* [Log4j不同等级输入不同文件的配置](http://www.tuicool.com/articles/Y7RZvaQ)
