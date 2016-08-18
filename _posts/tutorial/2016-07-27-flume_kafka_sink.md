@@ -3,7 +3,7 @@ layout: post
 title: FlumeNG Kafka Sink
 permalink: /:categories/flume_kafka_sink/
 date: 2016-07-27 11:30:15 +0800
-category: FlumeNG
+category: Tutorial
 tags: [flume]
 ---
 

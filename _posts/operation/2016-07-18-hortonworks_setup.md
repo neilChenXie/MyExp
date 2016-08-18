@@ -3,7 +3,7 @@ layout: post
 title: Ambari-HDP 环境准备
 permalink: /:categories/Hortonworks_setup/
 date: 2016-07-18 11:30:15 +0800
-category: Ambari
+category: Operation
 tags: [hortonworks, setup]
 ---
 

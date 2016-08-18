@@ -3,7 +3,7 @@ layout: post
 title: 环境搭建资源评估
 permalink: /:categories/resource_prediction/
 date: 2016-07-29 13:30:15 +0800
-category: Arch
+category: Architecture
 tags: [resource, prediciton]
 ---
 
