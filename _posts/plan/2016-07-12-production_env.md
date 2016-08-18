@@ -2,7 +2,7 @@
 layout: post
 title: 生产环境搭建
 permalink: /:categories/production_env/
-date: 2016-07-12 11:30:15 +0800
+date: 2016-07-07 11:30:15 +0800
 category: Plan
 tags: [hortonworks]
 ---
