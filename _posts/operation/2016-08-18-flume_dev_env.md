@@ -185,9 +185,9 @@ then
   exit -1
 fi
 
-if [ ! -d flume/lib/sekorm ]
+if [ ! -d flume/tmp/lib ]
 then
-  echo "flume/lib/sekorm is not exist"
+  echo "flume/tmp/lib is not exist"
   exit -1
 fi
 
