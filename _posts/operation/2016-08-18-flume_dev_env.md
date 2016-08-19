@@ -137,3 +137,86 @@ log4j.appender.trashInfo.layout.ConversionPattern=%d{dd MMM yyyy HH:mm:ss,SSS} %
 
 * [Log4j.properties配置详解](http://it.oyksoft.com/log4j/)
 * [Log4j不同等级输入不同文件的配置](http://www.tuicool.com/articles/Y7RZvaQ)
+
+#### 脚本
+
+##### Flume-loadLog
+
+```bash
+#! /bin/bash
+
+if [ -z $1 ]
+then
+  echo "1st arg Filename is required"
+  exit -1
+fi
+
+if [ ! -d flume ]
+then
+  echo "flume is not installed"
+fi
+
+# Check spool directory exist and clean
+if [ ! -d flume/tmp/spool ]
+then
+  mkdir flume/tmp/spool
+else
+  rm -rf flume/tmp/spool
+  mkdir flume/tmp/spool
+fi
+
+cp $1 flume/tmp/spool/
+```
+
+##### Flume-loadJar
+
+```bash
+#!/bin/bash
+
+if [ ! -f sekorm-flume.jar ]
+then
+  echo "jar package must be sekorm-flume.jar"
+  exit -1
+fi
+
+if [ ! -d flume ]
+then
+  echo "flume is not installed"
+  exit -1
+fi
+
+if [ ! -d flume/lib/sekorm ]
+then
+  echo "flume/lib/sekorm is not exist"
+  exit -1
+fi
+
+mv sekorm-flume.jar  flume/tmp/lib/
+
+cd
+```
+
+##### Flume-start
+
+```bash
+#! /bin/bash
+
+cd
+
+if [ ! -d flume ]
+then
+  echo "flume is not Installed!!"
+  exit -1
+fi
+
+cd flume
+
+if [ -d ./tmp/logs ]
+then
+  rm ./tmp/logs/*
+  rm -r ~/logs
+fi
+
+#bin/flume-ng agent --conf conf --conf-file conf/flume-sekorm.properties --name agent -Dflume.root.logger=INFO,console
+bin/flume-ng agent --conf conf --conf-file conf/flume-sekorm.properties --name agent
+```
