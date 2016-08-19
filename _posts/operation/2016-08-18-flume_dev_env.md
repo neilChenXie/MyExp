@@ -116,13 +116,13 @@ log4j.appender.trashInfo.layout.ConversionPattern = %d{dd MMM yyyy HH:mm:ss,SSS}
 
 ## Debug level
 log4j.appender.trashDebug = org.apache.log4j.RollingFileAppender  
-log4j.appender.trashInfo.Threshold = DEBUG
+log4j.appender.trashDebug.Threshold = DEBUG
 log4j.appender.trashDebug.encoding = UTF-8
 log4j.appender.trashDebug.MaxFileSize = 100MB
 log4j.appender.trashDebug.MaxBackupIndex = 10
 log4j.appender.trashDebug.File = ${user.log.dir}/TrashFilterDebug.log
 log4j.appender.trashDebug.layout = org.apache.log4j.PatternLayout
-log4j.appender.trashInfo.layout.ConversionPattern=%d{dd MMM yyyy HH:mm:ss,SSS} %-5p [%t] (%C.%M:%L) %x - %m%n
+log4j.appender.trashDebug.layout.ConversionPattern=%d{dd MMM yyyy HH:mm:ss,SSS} %-5p [%t] (%C.%M:%L) %x - %m%n
 ```
 
 #### 增加依赖
