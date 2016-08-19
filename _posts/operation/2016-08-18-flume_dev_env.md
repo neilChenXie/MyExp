@@ -7,6 +7,20 @@ category: Operation
 tags: [flume, setup, env, operation]
 ---
 
+### 环境目的
+
+为开发提供测试Flume Interceptor单模块测试的环境。
+
+此环境提供给开发
+
+* 输入操作：
+  * 加载测试jar包
+  * 加载测试日志文件
+* 执行操作：
+  * 启动Flume
+* 输出文件:
+  * 日志文件
+
 ### 开发权限
 
 #### **固定名字**Jar包到**指定目录**
