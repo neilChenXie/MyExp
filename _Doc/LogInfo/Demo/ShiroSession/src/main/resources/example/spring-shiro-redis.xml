@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Spring Shiro Filter -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="/manage/login" />
+		<property name="successUrl" value="/task/addNew" />
+		<property name="unauthorizedUrl" value="/unauth.jsp" />
+
+		<property name="filterChainDefinitions">
+			<value>
+				/task/addNew=authc
+				/hello=anon
+			</value>
+		</property>
+	</bean>
+
+	<!-- Realm -->
+	<bean id="loginRealm" class="com.chen.st.realm.MyRealm" />
+
+	<!-- SecurityManager -->
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="loginRealm" />
+		<property name="sessionManager" ref="sessionManager" />
+	</bean>
+
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+	<!-- session manager -->
+	<bean id="sessionManager"
+		class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+		<property name="sessionDAO" ref="redisSessionDAO" />
+	</bean>
+
+	<!-- redis: RedisSessionDAO -->
+	<bean id="redisSessionDAO" class="com.sekorm.common.sessionDAO.RedisSessionDAO">
+		<property name="redisUtils" ref="redisUtils" />
+		<property name="keyPrefix" value="shiro_session:" />
+		<!-- Session过期值：秒级 -->
+		<property name="timeout" value="300" />
+	</bean>
+	<bean id="redisUtils" class="com.sekorm.common.sessionDAO.RedisUtils">
+		<!-- Required -->
+		<property name="host" value="172.16.2.51" />
+		<property name="port" value="6379" />
+		<!-- Optinal -->
+		<!-- 默认无密码 -->
+		<!-- <property name="password" value="" /> -->
+		<!-- 默认redis连接timeout值 -->
+		<property name="timeout" value="2000" />
+		<!-- 默认k-v过期值：秒级 -->
+		<property name="expire" value="86400" />
+		<!-- 连接池设置 -->
+		<property name="jedisPoolConfig" ref="redisPoolConfig" />
+	</bean>
+	<!-- jedis连接池设置 -->
+	<bean id="redisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<!-- org.apache.commons.pool2.impl.GenericObjectPoolConfig default -->
+		<property name="maxTotal" value="8" />
+		<property name="maxIdle" value="8" />
+		<property name="minIdle" value="0" />
+		<!-- org.apache.commons.pool2.impl.BaseObjectPoolConfig default -->
+		<property name="maxWaitMillis" value="-1" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<property name="testWhileIdle" value="false" />
+		<property name="timeBetweenEvictionRunsMillis" value="-1" />
+		<property name="numTestsPerEvictionRun" value="3" />
+		<property name="minEvictableIdleTimeMillis" value="1800000" />
+		<property name="softMinEvictableIdleTimeMillis" value="1800000" />
+		<property name="lifo" value="true" />
+		<property name="blockWhenExhausted" value="true" />
+	</bean>
+</beans>
