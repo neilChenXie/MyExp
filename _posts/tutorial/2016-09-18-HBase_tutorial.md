@@ -36,14 +36,13 @@ HDP(Hortonworks Data Platform) 2.4.0
 
 #### 连接池
 
-[stackoverflow](http://stackoverflow.com/questions/29482803/whats-the-best-way-to-get-htable-handle-of-hbase)
-
-[Hortonworks](https://community.hortonworks.com/articles/4091/hbase-client-application-best-practices.html)
+* [stackoverflow](http://stackoverflow.com/questions/29482803/whats-the-best-way-to-get-htable-handle-of-hbase)
+* [Hortonworks](https://community.hortonworks.com/articles/4091/hbase-client-application-best-practices.html)
 
 #### 表设计
 
 * [官方](http://hbase.apache.org/book.html#schema)
-* [Introduction to HBase Schema Design]({{ site.baseurl}}/_Doc/Reference/hbase_design.pdf)
+* [Introduction to HBase Schema Design]({{ site.baseurl }}/reference/hbase_design.pdf)
 * [Intel](http://itpeernetwork.intel.com/discussion-on-designing-hbase-tables/)
 * [stackoverflow](http://stackoverflow.com/questions/12908378/hbase-searching-by-part-of-a-key)
 
