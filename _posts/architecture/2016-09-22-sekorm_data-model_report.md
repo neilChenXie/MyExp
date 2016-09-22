@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 世强线上线下数据报告及方案
+title: 世强线上线下数据分析报告及方案
 permalink: /:categories/sekorm_data_model_report/
 date: 2016-09-22 09:30:15 +0800
 category: Architecture
