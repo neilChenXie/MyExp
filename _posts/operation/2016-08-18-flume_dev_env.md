@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flume 开发环境 部署
+title: Flume- 开发环境搭建
 permalink: /:categories/flume_env_setup/
 date: 2016-08-18 17:30:15 +0800
 category: Operation

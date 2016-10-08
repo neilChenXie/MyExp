@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flume 运维知识点
+title: Flume-运维知识点
 permalink: /:categories/flume_env_setup/
 date: 2016-08-23 15:30:15 +0800
 category: Operation

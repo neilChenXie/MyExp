@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Yum本地仓库及使用
+title: HDP Ambari 部署-Yum本地仓库及使用
 permalink: /:categories/ambari_hdp_yum_local_repo/
 date: 2016-07-20 17:30:15 +0800
 category: Operation

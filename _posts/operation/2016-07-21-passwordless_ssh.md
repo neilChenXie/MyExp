@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 无密码SSH配置
+title: HDP Ambari 部署-无密码SSH配置
 permalink: /:categories/passwordless_ssh/
 date: 2016-07-21 13:30:15 +0800
 category: Operation
