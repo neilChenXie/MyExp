@@ -21,7 +21,9 @@ tags: [gitlab, workflow]
 2. mercurial
 3. SourceTree
 
-### 开发人员步骤
+### 职责工作
+
+#### 一 开发人员
 
 一 设置
 
@@ -74,13 +76,13 @@ tags: [gitlab, workflow]
 
 > 讨论完毕，Pull Request被接受或者被驳回。
 
-### 开发库管理员
+#### 二 开发库管理员
 
 一 审核对开发库master分支发起的Pull Request
 
 二 大版本完成后，同步主库的master（主库master会有bug修复的新增代码），解决冲突，给主库master发起Pull Request。
 
-### 主库管理员
+#### 三 主库管理员
 
 一 审核对主库master分支发起的Pull Request
 
