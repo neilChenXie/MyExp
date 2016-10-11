@@ -13,7 +13,7 @@ tags: [gitlab, workflow]
 
 ### 安装
 
-[GitLab图形化软件]({{site.baseurl}}/file/GitLab_Software.zip)
+[GitLab图形化软件]({{site.baseurl}}/file/GitLab_Software.rar)
 
 步骤
 
